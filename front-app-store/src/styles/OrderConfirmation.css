@@ -1,0 +1,104 @@
+* {
+    font-family: "Readex Pro";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+
+ body {
+    width: 100%;
+    background-color: #f2f2f2;
+
+  }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+.content {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+
+.timer {
+    font-weight: bold;
+  }
+  .title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title {
+    font-weight: bolder;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    margin-top: 0;
+  }
+
+.paragraphe {
+    font-weight: 200;
+    padding: 10px;
+  }
+
+.confirm-button {
+	margin-top: 1rem !important;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0 auto;
+	border-radius: 10px;
+  }
+.confirm-button span {
+    margin-right: 8px;
+  }
+.material-icons {
+    font-size: 18px;
+    margin-left: 5px;
+  }
+
+ input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+ .timer {
+    font-size: 80px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ .rtl-text {
+    text-align: right;
+  }
+.rtl-span {
+    direction: rtl;
+  }
+ .icon {
+    margin-left: 8px;
+  }

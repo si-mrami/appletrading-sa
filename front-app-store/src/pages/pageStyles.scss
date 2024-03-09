@@ -1,0 +1,111 @@
+.iphone15-title {
+	background-color: rgb(51, 51, 51);
+	color: white;
+	display: flex;
+	padding: 1rem;
+	justify-content: flex-end;
+	position: absolute;
+	right: 15px;
+	left: 10px;
+	top: 70px;
+	border-radius: 10px;
+	font-weight: 400;
+	font-size: 12px;
+	font-family: 'Cairo', sans-serif;
+}
+
+.elements {
+	padding: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: center;
+	margin-top: 5rem;
+
+
+	.element {
+		display: flex !important;
+		width: 20vh !important;
+		padding: 0.2rem;
+		align-items: center;
+		flex-direction: column;
+		border: 1px solid lightgray;
+		border-radius: 10px;
+
+		.Top {
+			img {
+				width: 100%;
+				height: 12vh;
+				object-fit: contain;
+				padding: 0.4rem;
+			}
+		}
+
+		.Bottom {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			gap: 5px;
+
+			.title {
+				display: flex;
+				width: 100%;
+				background-color: inherit;
+				text-decoration: none !important;
+				color: #8b8181;
+				font-size: 12px;
+				align-items: center;
+				justify-content: center;
+				font-weight: 600;
+				font-family: 'Cairo', sans-serif;
+			}
+
+			.prices {
+				display: flex;
+				justify-content: space-between;
+				flex-direction: row-reverse;
+				align-items: center;
+				text-decoration: none;
+				gap: 10px;
+
+				.pricebefore {
+					color: gray;
+					font-size: 9px;
+
+					span {
+						text-decoration-line: line-through;
+						font-weight: 600;
+						font-family: 'Cairo', sans-serif;
+					}
+				}
+
+				.price {
+					font-size: 12px;
+					font-weight: 600;
+					font-family: 'Cairo', sans-serif;
+				}
+			}
+
+			.lastelement {
+				display: flex;
+				align-items: center;
+				justify-content: space-between !important;
+				width: 100%;
+				color: #111;
+
+				button {
+					border: none;
+					background-color: crimson;
+					color: #fff;
+					border-radius: 15px;
+					cursor: pointer;
+					padding: 0.3rem;
+					font-size: 11px;
+					font-weight: 600;
+					font-family: 'Cairo', sans-serif;
+				}
+			}
+		}
+	}
+
+}

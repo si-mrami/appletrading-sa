@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100% ;
+  height: auto;
+  background-color: #010725 ;
+  padding: 4px;
+  margin: 0;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.header-icon {
+  font-size: 40px;
+  color: white;
+  padding: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.icon-container {
+  position: relative; 
+}
+
+.cart-item-count {
+  background-color: white;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  font-weight: lighter;
+  font-size: 12px;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  transform: translateX(-50%);
+}
+.search-input {
+  background-color: inherit;
+  color: inherit;
+  width: 30px;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+  font-size: 12px;
+}
+@media (max-width: 600px) {
+  .header-icon {
+    font-size: 35px !important; 
+  }
+}
+@media (min-width: 600px) {
+  .header-icon {
+    font-size: 40px !important;
+  }
+
+  .search-input {
+    font-size: 16px !important;
+  }
+}
+
+.search-results-panel {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 1px); 
+  max-width: 500px; 
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+  overflow-y: auto;
+  max-height: 300px;
+  transition: left 0.3s ease-in-out; 
+}
+.search-results-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results-panel li {
+  cursor: pointer;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+  color: black;
+}
+
+.search-results-panel button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results-panel button svg {
+  fill: #000;
+  width: 20px;
+  height: 20px;
+}
+
+.search-results-panel.hidden {
+  right: -300px;
+}
+
+.username {
+  font-size: 20px;
+  color: white;
+  margin-right: 5px;
+}
+
+.flexible-space {
+  flex: 1;
+}

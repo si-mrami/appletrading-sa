@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap');
+
+.product-image {
+	max-width: 100%;
+	transition: transform 0.3s;
+}
+
+.product-image:hover {
+	transform: scale(1.1);
+}
+
+@media (min-width: 769px) {
+	.product-image {
+		max-width: 50%;
+	}
+
+	.sticky-button {
+		display: none;
+	}
+
+	.product-details-container {
+		padding: 0;
+		width: 100%;
+	}
+
+	.product-details-header {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.product-image {
+		max-width: 100%;
+	}
+
+	.product-details-container {
+		padding: 0;
+		width: 100%;
+	}
+
+	.product-details-header {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+.sticky-button {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	margin-top: 10px;
+	z-index: 1000;
+}
+
+.product-details-container {
+	padding: 0;
+	width: 100%;
+}
+
+.product-details-header {
+	width: 100%;
+	margin: 0;
+}
+
+.productInfo {
+	display: flex;
+	flex-direction: column;
+
+	.left {
+
+		.productName {
+			font-family: 'Cairo', sans-serif;
+			display: flex;
+
+
+			h3 {
+				text-align: end;
+				display: flex;
+				justify-content: flex-end;
+				width: 100% !important;
+				font-family: 'Cairo', sans-serif;
+				color: #808088;
+				font-size: 13px;
+				font-weight: bold;
+			}
+		}
+		.productTitle {
+			font-family: 'Cairo', sans-serif;
+			display: flex;
+			padding: 0.3rem;
+
+			h3 {
+				text-align: end;
+				display: flex;
+				justify-content: flex-end;
+				width: 100% !important;
+				font-family: 'Cairo', sans-serif;
+				color: #635f5f;
+				font-size: 16px;
+				font-weight: bold;
+				margin-top: 2rem;
+			}
+		}
+		.prices {
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+			align-items: center;
+			font-family: 'Cairo', sans-serif;
+
+			span {
+				color: crimson;
+				font-size: 20px;
+			}
+
+			p {
+				color: #808080;
+				font-size: 14px;
+				text-decoration: line-through;
+			}
+		}
+	}
+	.right {
+		// height: 4vh;
+		.carousel-control-next, .carousel-control-prev-icon {
+			display: none;
+		}
+
+		img {
+			height: 30vh;
+			width: 100%;
+			object-fit: contain;
+		}
+	}
+}
+
+.desc {
+	font-family: 'Cairo', sans-serif;
+	p {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end !important;
+		text-align: end !important;
+		padding-right: 0.2rem;
+		font-family: 'Cairo', sans-serif;
+	}
+}

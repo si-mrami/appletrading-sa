@@ -1,0 +1,19 @@
+.maintenance{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.maintenance  p{
+
+    font-size: 1.5rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+
+}

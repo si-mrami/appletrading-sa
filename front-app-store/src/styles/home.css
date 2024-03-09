@@ -1,0 +1,15 @@
+.home {
+	background-color: rgb(244, 244, 244);
+}
+
+
+.containerWithShadow {
+	padding: 0.3rem;
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	gap: 10px;
+
+  }
+
+  

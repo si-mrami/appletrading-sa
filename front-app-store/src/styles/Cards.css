@@ -1,0 +1,34 @@
+@media (max-width: 768px) {
+  .carousel .thumbs-wrapper {
+    display: none;
+  }
+  .carousel .carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .carousel .slide {
+    flex: 0 0 calc(50% - 5px); 
+    margin: 5px; 
+  }
+  .carousel .slide .media-card {
+    width: 100%; 
+  }
+}
+  .arrow-circle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #333; 
+    color: #fff; 
+    cursor: pointer;
+    margin: 0 10px; 
+  }
+  
+  .arrow-circle:hover {
+    background-color: #555; 
+  }
+  
