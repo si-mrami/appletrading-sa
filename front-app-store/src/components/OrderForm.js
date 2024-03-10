@@ -186,10 +186,14 @@ const OrderForm = ({ toggleOrderForm, product, quantity, image }) => {
               type="text"
               id="phone"
               name="phone"
-              placeholder=" رقم الجوال مراد تسليمه الطلب"
+              placeholder="رقم الجوال مراد تسليمه الطلب"
               className="input-field"
               value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={(e) => {
+                const input = e.target.value;
+                const filteredInput = input.replace(/[^0-9+]/g, "");
+                setPhone(filteredInput);
+              }}
               required
             />
           </div>

@@ -37,7 +37,7 @@ const HomePage = () => {
 		fetchCategories();
 	}, []);
 
-	const whatsappNumber = "+966580564726";
+	const whatsappNumber = "+966536456617";
 	const whatsappMessage = "مرحبا!, انا اريد ان استفسر عن منتج,...";
 
 	return (

@@ -210,7 +210,7 @@ const ProductDetails = () => {
 
 					<div className="prices">
 						<span>{product.price}</span>
-						<p>{product.beforePrice}</p>
+						<span className="p">{product.beforePrice}</span>
 					</div>
 				</div>
 				<div className="right">
@@ -332,7 +332,7 @@ const ProductDetails = () => {
 			</div>
 			<ReviewsPage productId={productId} />
 			<ReviewForm onSubmit={handleReviewSubmit} productId={productId} />
-			{window.innerWidth <= 768 && <StickyButton productId={productId} />}
+			{window.innerWidth <= 768 && <StickyButton productId={productId} toggleOrderForm={toggleOrderForm}/>}
 			<Sectionfooter className="sectionfooter" style={{ textAlign: "center" }} />
 		</div>
 	);
