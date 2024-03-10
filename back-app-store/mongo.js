@@ -1,33 +1,31 @@
-const mongoose=require("mongoose")
+const mongoose = require("mongoose");
+// v7c50829SPbKG6s3
+mongoose
+  .connect(
+    "mongodb+srv://doadmin:v7c50829SPbKG6s3@applestore-db-de7a7ba9.mongo.ondigitalocean.com/admin?tls=true&authSource=admin&replicaSet=applestore-db"
+  )
+  .then(() => {
+    console.log("Db Connected!");
+  })
+  .catch((err) => {
+    throw err;
+  });
 
-mongoose.connect("mongodb+srv://doadmin:5zX1y4GeH82u63K9@mystoredb-57efe7b6.mongo.ondigitalocean.com/admin?tls=true&authSource=admin&replicaSet=mystoredb", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-.then(()=>{
-    console.log("mongodb connected");
-})
-.catch((error) => {
-    console.error('Failed to connect to MongoDB:', error);
-})
+const newSchema = new mongoose.Schema({
+  email: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  username: {
+    type: String,
+    required: true,
+  },
+});
 
+const users = mongoose.model("users", newSchema);
 
-
-const newSchema=new mongoose.Schema({
-    email:{
-        type:String,
-        required:true
-    },
-    password:{
-        type:String,
-        required:true
-    },
-    username:{
-        type:String,
-        required:true
-    }
-})
-
-const users = mongoose.model("users",newSchema)
-
-module.exports= users
+module.exports = users;

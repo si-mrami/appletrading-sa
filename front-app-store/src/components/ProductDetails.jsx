@@ -12,6 +12,7 @@ import axios from 'axios';
 import { baseUrl } from '../enveronment.js';
 import Carousel from 'react-bootstrap/Carousel';
 import KeyboardArrowLeftOutlinedIcon from '@mui/icons-material/KeyboardArrowLeftOutlined';
+import Sectionfooter from "./Sectionfooter.jsx";
 
 const mobileQuantityStyle = {
 	display: "flex",
@@ -332,6 +333,7 @@ const ProductDetails = () => {
 			<ReviewsPage productId={productId} />
 			<ReviewForm onSubmit={handleReviewSubmit} productId={productId} />
 			{window.innerWidth <= 768 && <StickyButton productId={productId} />}
+			<Sectionfooter className="sectionfooter" style={{ textAlign: "center" }} />
 		</div>
 	);
 };

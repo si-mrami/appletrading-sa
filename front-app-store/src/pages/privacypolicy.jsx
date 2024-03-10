@@ -1,36 +1,42 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import GreetingBanner from "../components/GreetingBanner";
 
 const Privacypolicy = () => {
-  const textStyle = {
-    fontSize: "1.3rem",
-    margin: "20px 0",
-  };
+	const textStyle = {
+		fontSize: "15px",
+		fontWeight: '600',
+		textAlign: 'end',
+		margin: "20px 0",
+		fontFamily: 'Cairo, sans-serif',
+		color: '#8b8181',
+	};
 
   const containerStyle = {
     minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
 };
-  
+
 const contentStyle = {
   flex: 1,
   padding: '20px',
   display: 'flex',
   flexDirection: 'column',
-  marginBottom: 'auto', 
+  marginBottom: 'auto',
 };
 
 
 const scrollableContentStyle = {
-  overflowY: 'auto',
-  maxHeight: '80vh', 
+//   overflowY: 'auto',
+//   maxHeight: '80vh',
 };
 
 
   return (
     <div   style={containerStyle} >
+		<GreetingBanner/>
       <Header />
       <div style={contentStyle}>
         <div style={scrollableContentStyle}>

@@ -10,7 +10,7 @@ import { baseUrl } from "../enveronment.js";
 import { useShoppingCart } from "./ShoppingCartContext";
 import ShoppingCartSlide from "./ShoppingCartSlide";
 import List from "@material-ui/core/List";
-import MSLogo from "../Assets/MS.jpeg";
+import MSLogo from "../Assets/logo.png";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 
