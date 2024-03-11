@@ -99,29 +99,29 @@ const MenuDrawer = ({
           الرئيسية
         </div>
         <div
-          onClick={() => handleMenuItemClick("اجهزة بلاستيشن")}
+          onClick={() => handleMenuItemClick("اجهزة ايفون 14")}
           style={{
-            color: selectedMenuItem === "اجهزة بلاستيشن" ? "red" : "black",
+            color: selectedMenuItem === "اجهزة ايفون 14" ? "red" : "black",
             textAlign: "right", marginRight:'10px', cursor: "pointer",
             transition: "background 0.3s",
             marginBottom: '20px',
             fontFamily: "Cairo, sans-serif",
           }}
         >
-          أجهزة بلايستيشن
+           اجهزة ايفون 14
         </div>
         <div
-          onClick={() => handleMenuItemClick("اكسسوارات بلاستيشن")}
+          onClick={() => handleMenuItemClick("اجهزة ايفون 15")}
           style={{
             color:
-              selectedMenuItem === "اكسسوارات بلاستيشن" ? "red" : "black",
+              selectedMenuItem === "اجهزة ايفون 15" ? "red" : "black",
               textAlign: "right", marginRight:'10px', cursor: "pointer",
               transition: "background 0.3s",
             marginBottom: '20px',
 			fontFamily: "Cairo, sans-serif",
           }}
         >
-          أكسسوارات بلايستيشن
+          اجهزة ايفون 15
         </div>
         <div
           onClick={() => handleMenuItemClick(" ساعات")}
