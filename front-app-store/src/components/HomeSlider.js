@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel';
-import slide1 from '../Assets/slide1.jpeg';
-import slide2 from '../Assets/slide2.jpeg';
+import slide1 from '../Assets/Screenshot from 2024-03-11 14-27-58.png';
+import slide2 from '../Assets/Screenshot from 2024-03-11 14-48-02.png';
 import slide3 from '../Assets/slide3.jpeg';
 import "../styles/HomeSlider.css";
 import { Link } from 'react-router-dom';

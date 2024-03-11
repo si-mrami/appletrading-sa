@@ -106,9 +106,7 @@ const OrderForm = ({ toggleOrderForm, product, quantity, image }) => {
 
   const calculateMonthlyInstallment = (selectedPeriod) => {
     const initialPayment = 1000;
-    const numericPrice =
-      parseFloat(product.price.replace(/[^\d٠-٩,]/g, "").replace(",", ".")) ||
-      0;
+    const numericPrice = parseFloat(product.price.split(".")[0]) || 0;
 
     const totalPayment = numericPrice * quantity - initialPayment;
 
@@ -212,7 +210,13 @@ const OrderForm = ({ toggleOrderForm, product, quantity, image }) => {
               placeholder="كود الخصم"
               className="input-field"
               value={discountCode}
-              onChange={(e) => setDiscount(e.target.value)}
+              onChange={(e) => {
+                const input = e.target.value;
+                const regex = /^[a-zA-Z0-9]*$/;
+                if (regex.test(input) || input === "") {
+                  setDiscount(input);
+                }
+              }}
             />
           </div>
 
@@ -280,18 +284,29 @@ const OrderForm = ({ toggleOrderForm, product, quantity, image }) => {
                   <option value={24}>24 شهر</option>
                 </select>
               </div>
-
+              {selectedPeriod !== 0 && (
+                <span
+                  style={{
+                    fontFamily: "Tajawal, sans-seri",
+                    fontWeight: "bold",
+					fontSize:'9px'
+                  }}
+                >
+                  التقسيط الشهري
+                </span>
+              )}
               <input
                 style={{
                   backgroundColor: "white",
                   border: "1px solid #ccc",
-                  borderRadius: "10px",
+                  borderRadius: "5px",
                   fontSize: "12px",
-                  height: "14px",
+                  //   height: "14px",
+                  padding: "0.3rem",
                 }}
                 type="text"
                 id="monthlyInstallment"
-                placeholder=" القسط الشهري"
+                placeholder="  ثمن التقسيط"
                 label="القسط الشهري"
                 value={monthlyInstallment}
                 readOnly

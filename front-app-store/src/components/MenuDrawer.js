@@ -19,7 +19,7 @@ const MenuDrawer = ({
       anchor="right"
       open={menuOpen}
       onClose={() => setMenuOpen(false)}
-      style={{ fontSize: 20, margin: 0, paddingTop: 0 }}
+      style={{ fontSize: 20, margin: 0, paddingTop: 0 , width:'100%'}}
 	  className="sideMenu"
     >
       <div style={{ position: 'absolute', top: 0, left: 0, borderRadius: '50%', background: 'white', padding: '0px' }}>
@@ -92,7 +92,7 @@ const MenuDrawer = ({
             textAlign: "right",
             marginRight: '10px',
             marginBottom: '20px',
-            fontFamily: "Tajawal, sans-seri",
+			fontFamily: "Cairo, sans-serif",
             cursor: 'pointer'
           }}
         >
@@ -105,7 +105,7 @@ const MenuDrawer = ({
             textAlign: "right", marginRight:'10px', cursor: "pointer",
             transition: "background 0.3s",
             marginBottom: '20px',
-            fontFamily: "Tajawal, sans-seri",
+            fontFamily: "Cairo, sans-serif",
           }}
         >
           أجهزة بلايستيشن
@@ -118,7 +118,7 @@ const MenuDrawer = ({
               textAlign: "right", marginRight:'10px', cursor: "pointer",
               transition: "background 0.3s",
             marginBottom: '20px',
-            fontFamily: "Tajawal, sans-seri",
+			fontFamily: "Cairo, sans-serif",
           }}
         >
           أكسسوارات بلايستيشن
@@ -130,7 +130,7 @@ const MenuDrawer = ({
             textAlign: "right",
             marginRight: '10px',
             marginBottom: '20px',
-            fontFamily: "Tajawal, sans-seri",
+			fontFamily: "Cairo, sans-serif",
             cursor: 'pointer'
           }}
         >
@@ -144,7 +144,7 @@ const MenuDrawer = ({
             textAlign: "right",
             marginRight: '10px',
             marginBottom: '20px',
-            fontFamily: "Tajawal, sans-seri",
+			fontFamily: "Cairo, sans-serif",
             cursor: 'pointer'
           }}
         >
@@ -158,7 +158,7 @@ const MenuDrawer = ({
             textAlign: "right", marginRight:'10px', cursor: "pointer",
             transition: "background 0.3s",
             marginBottom: '20px',
-            fontFamily: "Tajawal, sans-seri"
+            fontFamily: "Cairo, sans-serif",
           }}
         >
           اجهزة لابتوب

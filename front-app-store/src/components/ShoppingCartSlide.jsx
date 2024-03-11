@@ -52,12 +52,11 @@ const ShoppingCartSlide = ({ isOpen, onClose }) => {
 										<span className="product-quantity" style={{ margin: '5px', fontWeight: 'bold' }}>{item.quantity}</span>
 										<button onClick={() => updateQuantity(item.id, item.quantity + 1)} style={{ border: 'solid 1px #852C91', width: '20px', height: '20px', paddingBottom: '7px', color: '#852C91' }}>+</button>
 									</div>
-
 									<p style={{ textAlign: 'right', fontSize: '15px' }} >         :الكمية</p>
 								</div>
-								
+
 								<div style={{ display: 'flex', justifyContent: 'space-between' }}>
-									<span className="product-price" style={{ color: '#00CCC9', textAlign: 'right', marginBottom: '5px', fontSize: '25px' }}>{item.price}</span>
+									<span className="product-price" style={{ color: '#00CCC9', textAlign: 'right', marginBottom: '5px', fontSize: '25px' }}> {item.price.split('.')[0]}</span>
 								</div>
 							</div>
 						</div>
@@ -72,10 +71,10 @@ const ShoppingCartSlide = ({ isOpen, onClose }) => {
 					<div className="TotalPrice">  {calculateTotal()} ر.س  </div></span>
 				<div style={{ margin: '4px', width: '280px', marginRight: '30px', marginLeft: '30px', marginTop: '30px' }}></div>
 				<span className="total-Container"> <p className="total"> (%15)  ضريبة القيمة المضافة </p>
-					<div className="TotalPrice">  {calculateTotal()} ر.س  </div></span>
+					<div className="TotalPrice">  {calculateTotal() + 15} ر.س  </div></span>
 				<div style={{ border: '1px solid #ccc', marginTop: '4px', width: '100%', marginTop: '30px' }}></div>
 				<span className="total-Container"> <p className="total" style={{ fontSize: '16px', fontWeight: 'bold' }}>   المجموع</p>
-					<div className="TotalPrice" style={{ fontSize: '16px', color: '#00CCC9' }}>  {calculateTotal()} ر.س  </div></span>
+					<div className="TotalPrice" style={{ fontSize: '16px', color: '#00CCC9' }}>  {calculateTotal() + 15} ر.س  </div></span>
 
 				<Grid container justifyContent="center" style={{ marginTop: '30px' }}>
 					<Grid item>

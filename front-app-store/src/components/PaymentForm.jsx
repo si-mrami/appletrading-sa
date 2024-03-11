@@ -60,10 +60,10 @@ const PaymentForm = () => {
 		const month = truncatedInput.slice(0, 2);
 		const year = truncatedInput.slice(2, 4);
 
-		if (month < '01' || month > '12') {
-			alert('الرجاء إدخال شهر صالح (01 إلى 12).');
-			return;
-		}
+		// if (month < '01' || month > '12') {
+		// 	alert('الرجاء إدخال شهر صالح (01 إلى 12).');
+		// 	return;
+		// }
 
 		const formattedDate = `${month}/${year}`;
 
