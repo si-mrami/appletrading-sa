@@ -36,12 +36,12 @@ const Sectionfooter = () => {
 						<GrContactInfo />
 					</h1>
 					<span>
-						متجر ماي ستور لجميع منتجات الهواتف الذكية والألعاب سوني
+						مؤسسة ابل التجارية لجميع منتجات الهواتف الذكية والألعاب سوني
 					</span>
 					<div className="infoIcons">
-						<a href="mailto:maystwr9@gmail.com">
+						<a href="mailto:f1642397@gmail.com">
 							<div className="item">
-								<span>ايمايل</span>
+								<span>الايمايل</span>
 								<EmailIcon />
 							</div>
 						</a>

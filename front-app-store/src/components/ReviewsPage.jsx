@@ -110,6 +110,7 @@ const ReviewsPage = ({ productId }) => {
 	let combinedReviews = reviews.length > 0 ? reviews : Staticreviews;
 
 	combinedReviews = combinedReviews.sort(() => Math.random() - 0.5);
+	console.log("rev: ", combinedReviews)
 
 	const getTimeAgo = (date) => {
 		moment.locale('ar');
