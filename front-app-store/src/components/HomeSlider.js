@@ -23,11 +23,11 @@ export default function HomeSlider() {
   };
 
   const slides = [
-     <Link style={{textDecoration: 'none', marginTop:'0'}} to= {`/Playstations`} key={1} className="carousel-container">
-      <img src={slide1} alt="Slide 1" />
+     <Link style={{textDecoration: 'none', marginTop:'0'}} to= {`/iphones15`} key={1} className="carousel-container">
+      <img src={slide2} alt="Slide 1" />
     </Link>,
       <Link style={{textDecoration: 'none',marginTop:'0'}} to= {`/iphones15`}  key={2} className="carousel-container">
-      <img src={slide2} alt="Slide 2" />
+      <img src={slide1} alt="Slide 2" />
       </Link> ,
        <Link style={{textDecoration: 'none', marginTop:'0'}} to={`/iphones15`}  key={3} className="carousel-container">
       <img src={slide3} alt="Slide 3" />
