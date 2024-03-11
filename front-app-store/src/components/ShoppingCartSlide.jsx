@@ -11,7 +11,7 @@ const ShoppingCartSlide = ({ isOpen, onClose }) => {
 	const { removeFromCart, calculateTotal, cartItems, updateQuantity } = useShoppingCart();
 
 	useEffect(() => {
-		// console.log('Cart items changed. Recalculating total.');
+		// console.log('Cart items changed. Recalculating total.', calculateTotal);
 	}, [cartItems]);
 
 	const orderDetailsString = localStorage.getItem('orderDetails');
@@ -27,8 +27,8 @@ const ShoppingCartSlide = ({ isOpen, onClose }) => {
 			</div>
 
 			<div className="shopping-cart-items">
-				{cartItems.map((item) => (
-					<div key={item.id} className="cart-item">
+				{cartItems.map((item, index) => (
+					<div key={index} className="cart-item">
 						<div className="product-info">
 							<div className="product-details">
 								<div className="title-and-delete">
@@ -44,12 +44,18 @@ const ShoppingCartSlide = ({ isOpen, onClose }) => {
 								</div>
 								<div className="quantity-container">
 									<div>
-										<button onClick={() => updateQuantity(item.id, item.quantity - 1)} style={{ border: 'solid 1px #852C91', width: '20px', height: '20px', paddingBottom: '7px', color: '#852C91' }}>-</button>
+										<button onClick={() => {
+											if (item.quantity > 1) {
+												updateQuantity(item.id, item.quantity - 1);
+											}
+										}} style={{ border: 'solid 1px #852C91', width: '20px', height: '20px', paddingBottom: '7px', color: '#852C91' }}>-</button>
 										<span className="product-quantity" style={{ margin: '5px', fontWeight: 'bold' }}>{item.quantity}</span>
 										<button onClick={() => updateQuantity(item.id, item.quantity + 1)} style={{ border: 'solid 1px #852C91', width: '20px', height: '20px', paddingBottom: '7px', color: '#852C91' }}>+</button>
 									</div>
+
 									<p style={{ textAlign: 'right', fontSize: '15px' }} >         :الكمية</p>
 								</div>
+								
 								<div style={{ display: 'flex', justifyContent: 'space-between' }}>
 									<span className="product-price" style={{ color: '#00CCC9', textAlign: 'right', marginBottom: '5px', fontSize: '25px' }}>{item.price}</span>
 								</div>

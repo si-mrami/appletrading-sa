@@ -113,10 +113,10 @@ const Cards = ({ categories }) => {
 				</Box>
 				<div className="items">
 					<Slider ref={sliderRef} {...settings}>
-						{products.map((product) => (
+						{products.map((product, index) => (
 							<Link
 								className="Linkstyle"
-								key={product.id}
+								key={index}
 								to={`/product/${product._id}`}
 							>
 								<Card

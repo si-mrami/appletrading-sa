@@ -112,7 +112,7 @@ const ProductsCarousel = ({ category }) => {
 			</Box>
 			<Slider ref={sliderRef} {...settings}>
 				{products.map((product) => (
-					<div key={product.id} style={{ display: 'flex', justifyContent: 'center' }}>
+					<div key={product._id} style={{ display: 'flex', justifyContent: 'center' }}>
 						<Link className="Linkstyle" to={`/product/${product._id}`}>
 							<IphonsCard
 								image={product.imageUrl}
