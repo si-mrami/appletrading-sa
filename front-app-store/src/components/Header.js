@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
@@ -32,10 +32,10 @@ const Header = () => {
     const path = location.pathname;
     if (path === "/الرئيسية") {
       setSelectedMenuItem("الرئيسية");
-    } else if (path === "/Playstations") {
-      setSelectedMenuItem("اجهزة بلاستيشن");
-    } else if (path === "/playstation-accessories") {
-      setSelectedMenuItem("اكسسوارات بلاستيشن");
+    } else if (path === "/iphone14") {
+      setSelectedMenuItem("اجهزة ايفون 14");
+    } else if (path === "/iphones15") {
+      setSelectedMenuItem("اجهزة ايفون 15");
     } else if (path === "/watches") {
       setSelectedMenuItem(" ساعات");
     } else if (path === "/Ipads") {
@@ -115,10 +115,10 @@ const Header = () => {
   const handleMenuItemClick = (menuItem) => {
     if (menuItem === "الرئيسية") {
       navigate("/الرئيسية");
-    } else if (menuItem === "اجهزة بلاستيشن") {
-      navigate("/Playstations");
-    } else if (menuItem === "اكسسوارات بلاستيشن") {
-      navigate("/playstation-accessories");
+    } else if (menuItem === "اجهزة ايفون 15") {
+      navigate("/iphones15");
+    } else if (menuItem === "اجهزة ايفون 14") {
+      navigate("/iphone14");
     } else if (menuItem === " ساعات") {
       navigate("/watches");
     } else if (menuItem === "ايبادات ابل") {
@@ -232,12 +232,15 @@ const Header = () => {
         </div>
 
         <div className="flexible-space"></div>
-        <div className="icon-container" style={{ marginRight: "10px" }}>
-          <img
-            src={MSLogo}
-            alt="MS Logo"
-            style={{ height: "30px", width: "30px", borderRadius: "50%" }}
-          />
+        <div className="icon-container" style={{ marginRight: "10px" , display:'flex', gap:'7px'}}>
+          <span style={{color:'#fff', fontSize:'9px', fontWeight:'bold'}}>معتمدين بوزارة التجارة</span>
+          <Link to="/">
+            <img
+              src={MSLogo}
+              alt="MS Logo"
+              style={{ height: "30px", width: "30px", borderRadius: "50%" }}
+            />
+          </Link>
         </div>
 
         <div className="icon-container" onClick={toggleMenu}>
