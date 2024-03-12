@@ -233,7 +233,6 @@ const Header = () => {
 
         <div className="flexible-space"></div>
         <div className="icon-container" style={{ marginRight: "10px" , display:'flex', gap:'7px'}}>
-          <span style={{color:'#fff', fontSize:'9px', fontWeight:'bold'}}>معتمدين بوزارة التجارة</span>
           <Link to="/">
             <img
               src={MSLogo}

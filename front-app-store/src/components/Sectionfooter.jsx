@@ -64,15 +64,14 @@ const Sectionfooter = () => {
 					</div>
 				</div>
 			</div>
-			{/* <div className="center">
-				<span>310466540400003</span>
-				<span>: الرقم الضريبي </span>
-				<a href="https://maroof.sa/"
+			<div className="center">
+				<span >معتمدين بوزارة التجارة</span>
+				<a href="https://maroof.sa/330149"
 					target="_blank"
 					rel="noopener noreferrer">
 					<img src="https://play-lh.googleusercontent.com/Rj-nvbmRDYczvZ8kfSM6BDD1cCr0XMiq9jP1YBo6gIxSo-bAY3SEJsRWdy99ZiCR3XlG" alt="" />
 				</a>
-			</div> */}
+			</div>
 			<div className="right">
 				<div className="top">
 					<h1>
