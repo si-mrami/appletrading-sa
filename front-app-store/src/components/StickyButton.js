@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const StickyButton = ({ productId, toggleOrderForm }) => {
+const StickyButton = ({ productId, toggleOrderForm, }) => {
   const handleClick = () => {
     toggleOrderForm();
   };
+
+
 
   return (
     <Link to={`/product/${productId}`}>

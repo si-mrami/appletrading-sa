@@ -13,6 +13,7 @@ import { baseUrl } from '../enveronment.js';
 import Carousel from 'react-bootstrap/Carousel';
 import KeyboardArrowLeftOutlinedIcon from '@mui/icons-material/KeyboardArrowLeftOutlined';
 import Sectionfooter from "./Sectionfooter.jsx";
+import ContactSupportIcon from '@mui/icons-material/ContactSupport';
 
 const mobileQuantityStyle = {
 	display: "flex",
@@ -54,6 +55,11 @@ const ProductDetails = () => {
 	const [allImages, setAllImages] = useState([]);
 	const [image, setImage] = useState(allImages.length > 0 ? allImages[0] : null);
 	const [expandedDescription, setExpandedDescription] = useState(false);
+	const [showdesc, setShowdesc] = useState(true);
+
+	const onshowdesc = () => {
+		setShowdesc(!showdesc);
+	}
 
 	useEffect(() => {
 		const fetchProduct = async () => {
@@ -72,7 +78,7 @@ const ProductDetails = () => {
 			}
 		};
 
-			fetchProduct();
+		fetchProduct();
 	}, [productId]);
 
 	useEffect(() => {
@@ -199,7 +205,7 @@ const ProductDetails = () => {
 						<h3>
 							{product.name}
 						</h3>
-							<KeyboardArrowLeftOutlinedIcon style={{ fontSize: '15px' }} />
+						<KeyboardArrowLeftOutlinedIcon style={{ fontSize: '15px' }} />
 					</div>
 					<div className="productTitle">
 						<h3>
@@ -321,17 +327,25 @@ const ProductDetails = () => {
 			</div>
 
 			<div className="desc" style={{ textAlign: "center", marginTop: "40px" }}>
-				<h2 style={{ fontSize: "32px" }}>الوصف</h2>
-				<p>{expandedDescription ? product.description : product.description.split('\n')[0]}</p>
-				{!expandedDescription && (
+				<div className="item" onClick={onshowdesc}>
+					<ContactSupportIcon />
+					<span>تفاصيل المنتج</span>
+				</div>
+				{!showdesc && (
+					<p>{expandedDescription ? product.description : product.description.split('\n')[0]}</p>
+				)}
+				{!expandedDescription && !showdesc && (
 					<a href="#expand-description" onClick={expandDescription} style={{ ...buttonStyle, color: "blue" }}>
 						عرض المزيد
 					</a>
 				)}
 			</div>
+
 			<ReviewsPage productId={productId} />
 			<ReviewForm onSubmit={handleReviewSubmit} productId={productId} />
-			{window.innerWidth <= 768 && <StickyButton productId={productId} toggleOrderForm={toggleOrderForm}/>}
+			{!showOrderForm && window.innerWidth <= 768 && (
+				<StickyButton productId={productId} toggleOrderForm={toggleOrderForm} />
+			)}
 			<Sectionfooter className="sectionfooter" style={{ textAlign: "center" }} />
 		</div>
 	);

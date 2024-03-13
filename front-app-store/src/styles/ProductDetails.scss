@@ -143,13 +143,28 @@
 }
 
 .desc {
-	font-family: 'Cairo', sans-serif;
-	p {
-		display: flex;
-		align-items: center;
-		justify-content: flex-end !important;
-		text-align: end !important;
-		padding-right: 0.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	.item {
+		border: 1px solid lightgray;
+		margin-bottom: 1rem;
+		padding: 1rem;
 		font-family: 'Cairo', sans-serif;
+		border-radius: 5px;
+
+		span {
+			font-size: 14px;
+			font-weight: bold;
+		}
+		p {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end !important;
+			text-align: end !important;
+			padding-right: 0.2rem;
+			font-family: 'Cairo', sans-serif;
+		}
 	}
 }
