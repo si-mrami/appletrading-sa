@@ -236,7 +236,7 @@ const Header = () => {
           <Link to="/">
             <img
               src={MSLogo}
-              alt="MS Logo"
+              alt=""
               style={{ height: "30px", width: "30px", borderRadius: "50%" }}
             />
           </Link>

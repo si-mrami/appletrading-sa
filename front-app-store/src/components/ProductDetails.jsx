@@ -74,7 +74,7 @@ const ProductDetails = () => {
 		if (productId) {
 			fetchProduct();
 		}
-	}, [productId]);
+	}, []);
 
 	useEffect(() => {
 		const fetchProductImages = async () => {
