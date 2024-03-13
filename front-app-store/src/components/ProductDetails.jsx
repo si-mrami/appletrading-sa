@@ -62,6 +62,7 @@ const ProductDetails = () => {
 				const response = await axios.get(url);
 				if (response.status === 200) {
 					const data = response.data;
+					console.log(data);
 					setProduct(data);
 				} else {
 					console.error("Request failed with status:", response.status);
