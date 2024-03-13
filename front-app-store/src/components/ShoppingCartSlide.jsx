@@ -17,6 +17,12 @@ const ShoppingCartSlide = ({ isOpen, onClose }) => {
 	const orderDetailsString = localStorage.getItem('orderDetails');
 	const orderDetails = orderDetailsString ? JSON.parse(orderDetailsString) : null;
 
+	const handledariba = () => {
+		const total = parseInt(calculateTotal(), 10);
+		const totalWithExtra = total + 15;
+		return totalWithExtra;
+	};
+
 	return (
 		<div className={`shopping-cart-slide ${isOpen ? "open" : ""}`}>
 			<div className="shopping-cart-header">
@@ -71,10 +77,10 @@ const ShoppingCartSlide = ({ isOpen, onClose }) => {
 					<div className="TotalPrice">  {calculateTotal()} ر.س  </div></span>
 				<div style={{ margin: '4px', width: '280px', marginRight: '30px', marginLeft: '30px', marginTop: '30px' }}></div>
 				<span className="total-Container"> <p className="total"> (%15)  ضريبة القيمة المضافة </p>
-					<div className="TotalPrice">  {calculateTotal() + 15} ر.س  </div></span>
+					<div className="TotalPrice">  {handledariba()} ر.س  </div></span>
 				<div style={{ border: '1px solid #ccc', marginTop: '4px', width: '100%', marginTop: '30px' }}></div>
 				<span className="total-Container"> <p className="total" style={{ fontSize: '16px', fontWeight: 'bold' }}>   المجموع</p>
-					<div className="TotalPrice" style={{ fontSize: '16px', color: '#00CCC9' }}>  {calculateTotal() + 15} ر.س  </div></span>
+					<div className="TotalPrice" style={{ fontSize: '16px', color: '#00CCC9' }}>  {handledariba()} ر.س  </div></span>
 
 				<Grid container justifyContent="center" style={{ marginTop: '30px' }}>
 					<Grid item>

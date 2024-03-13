@@ -68,8 +68,8 @@ export const ShoppingCartProvider = ({ children }) => {
 
 	const calculateTotal = () => {
 		const totalWithoutDiscount = cartItems.reduce((total, item) => {
-			// const priceNumeric = convertPriceToNumeric(item.price);
-			return total + item.price * item.quantity;
+			const priceNumeric = convertPriceToNumeric(item.price);
+			return total + priceNumeric * item.quantity;
 		}, 0);
 
 		let discountAmount = 0;
@@ -84,17 +84,8 @@ export const ShoppingCartProvider = ({ children }) => {
 		}
 
 		const totalWithDiscount = totalWithoutDiscount - discountAmount;
-
-		// Convert total to string, split based on decimal point, and take the first part
-		const totalInteger = Math.trunc(totalWithDiscount);
-
-		return totalInteger;
+		return totalWithDiscount.toFixed();
 	};
-
-
-
-
-
 
 
 
