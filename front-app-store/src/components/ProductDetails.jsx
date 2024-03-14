@@ -57,37 +57,13 @@ const ProductDetails = () => {
 	const [expandedDescription, setExpandedDescription] = useState(false);
 	const [showdesc, setShowdesc] = useState(true);
 
-	const [categories, setCategories] = useState([]);
-	const defaultCategories = ["playstation5", "iphone15pro"];
-
-	useEffect(() => {
-		const fetchCategories = async () => {
-			try {
-				let url = `${baseUrl}categories`;
-				const response = await axios.get(url);
-				if (response.status === 200) {
-					const data = response.data;
-					setCategories(data);
-				} else {
-					console.error("Failed to fetch categories. Status code:", response.status);
-					console.error("Error response:", response.statusText);
-				}
-			} catch (error) {
-				console.error("Error:", error);
-			}
-		};
-
-		fetchCategories();
-	}, []);
-
 	const onshowdesc = () => {
 		setShowdesc(!showdesc);
 	}
-
 	useEffect(() => {
 		const fetchProduct = async () => {
 			try {
-				let url = `${baseUrl}products/${productId}`;
+				const url = `${baseUrl}products/${productId}`;
 				const response = await axios.get(url);
 				if (response.status === 200) {
 					const data = response.data;
@@ -141,7 +117,6 @@ const ProductDetails = () => {
 
 		window.addEventListener("resize", handleResize);
 		handleResize();
-
 		return () => {
 			window.removeEventListener("resize", handleResize);
 		};
@@ -256,19 +231,16 @@ const ProductDetails = () => {
 			<div className="hashtagg">
 				<h2 style={{ fontSize: "24px", textAlign: "right" }}>:الوسوم</h2>
 				<ul className="listHashtag">
-					{
-						product.hashtags.map((hashtag, index) => (
-							formattedHashtags.map((hashta) => (
-								<li key={index}>
-									<Link to={`/products-by-hashtags/${hashtag}`}>
-										<span>{hashta}</span>
-										<SellOutlinedIcon style={{ fontSize: '12px' }} />
-									</Link>
-								</li>
-							))
-						))
-					}
+					{product.hashtags.map((hashtag, index) => (
+						<li key={`${index}-${hashtag}`}>
+							<Link to={`/products-by-hashtags/${hashtag}`}>
+								<span>{formattedHashtags[index]}</span>
+								<SellOutlinedIcon style={{ fontSize: '12px' }} />
+							</Link>
+						</li>
+					))}
 				</ul>
+
 			</div>
 			<div id="quantity-block" style={quantityStyle}>
 				<div
