@@ -57,6 +57,29 @@ const ProductDetails = () => {
 	const [expandedDescription, setExpandedDescription] = useState(false);
 	const [showdesc, setShowdesc] = useState(true);
 
+	const [categories, setCategories] = useState([]);
+	const defaultCategories = ["playstation5", "iphone15pro"];
+
+	useEffect(() => {
+		const fetchCategories = async () => {
+			try {
+				let url = `${baseUrl}categories`;
+				const response = await axios.get(url);
+				if (response.status === 200) {
+					const data = response.data;
+					setCategories(data);
+				} else {
+					console.error("Failed to fetch categories. Status code:", response.status);
+					console.error("Error response:", response.statusText);
+				}
+			} catch (error) {
+				console.error("Error:", error);
+			}
+		};
+
+		fetchCategories();
+	}, []);
+
 	const onshowdesc = () => {
 		setShowdesc(!showdesc);
 	}
@@ -68,7 +91,6 @@ const ProductDetails = () => {
 				const response = await axios.get(url);
 				if (response.status === 200) {
 					const data = response.data;
-					console.log(data);
 					setProduct(data);
 				} else {
 					console.error("Request failed with status:", response.status);
@@ -77,7 +99,6 @@ const ProductDetails = () => {
 				console.error("Error:", error);
 			}
 		};
-
 		fetchProduct();
 	}, [productId]);
 
