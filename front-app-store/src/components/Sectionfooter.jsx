@@ -19,7 +19,7 @@ import './styles.scss';
 
 const Sectionfooter = () => {
 
-	const whatsappNumber = "+966580564726";
+	const whatsappNumber = "+966536456617";
 	const whatsappMessage = "مرحبًا! أنا أرغب في التحدث معك.";
 
 

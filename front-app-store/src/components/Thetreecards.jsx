@@ -99,7 +99,7 @@ const Thetreecards = () => {
 				<CardContent sx={cardContentStyle}>
 					<HeadsetMicIcon sx={{ fontSize: 48 }} />
 					<Typography className="texttitle" variant="h4">
-						<a  href="https://wa.me/+966504481954" target="_blank" rel="noopener noreferrer">
+						<a  href="https://wa.me/+966536456617" target="_blank" rel="noopener noreferrer">
 							الدعم السريع
 						</a>
 					</Typography>
@@ -117,8 +117,8 @@ const Thetreecards = () => {
 					}}
 				>
 					<Typography className="textitle" variant="h6" gutterBottom>
-						<a href="https://wa.me/+966504481954" target="_blank" rel="noopener noreferrer">
-							+966504481954
+						<a href="https://wa.me/+966536456617" target="_blank" rel="noopener noreferrer">
+							+966536456617
 						</a>
 					</Typography>
 				</CardContent>
