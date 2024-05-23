@@ -19,8 +19,7 @@ const upload = multer();
 const generatePDF = require("./Invoice-pdf");
 const fs = require("fs");
 
-// maystwr9@gmail.com
-// mystore2024
+
 
 const transporter = nodemailer.createTransport({
   service:'gmail',
@@ -31,8 +30,8 @@ const transporter = nodemailer.createTransport({
   debug:true,
   secureConnection: false,
   auth: {
-      user: 'maystwr9@gmail.com',
-      pass:'lzaw ozng rdez gjcm'
+      user: 'your email',
+      pass:'your pass key'
   },
   tls:{
       rejectUnauthorized:true
